@@ -1,0 +1,38 @@
+embeddedFonts: []
+
+pageSetup:
+    size: null
+    width: 32cm
+    height: 18cm
+    margin-top: 0cm
+    margin-bottom: 0cm
+    margin-left: 0cm
+    margin-right: 0cm
+    margin-gutter: 0cm
+    firstTemplate: coverPage
+
+pageTemplates:
+    coverPage:
+        frames: []
+            [13%, 6%, 74%, 80%]
+        showHeader: false
+        showFooter: false
+
+    standardPage:
+        frames: []
+            [3%, 1%, 94%, 98%]
+        showHeader: false
+        showFooter: true
+
+styles:
+    normal:
+        fontName: stdFont
+        textColor: #383745
+        fontSize: 32
+
+    heading:
+        fontName: stdBold
+        fontSize: 38
+        textColor: #3333ff
+
+

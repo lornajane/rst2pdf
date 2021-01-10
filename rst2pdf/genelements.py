@@ -676,24 +676,14 @@ class HandleListItem(NodeHandler, docutils.nodes.list_item):
         while len(colWidths) < 2:
             colWidths.append(client.styles['item_list'].colWidths[len(colWidths)])
 
-        if client.splittables:
-            node.elements = [
-                MySpacer(0, sb),
-                SplitTable(
-                    [[Paragraph(b, style=bStyle), el]],
-                    style=t_style,
-                    colWidths=colWidths,
-                ),
-            ]
-        else:
-            node.elements = [
-                MySpacer(0, sb),
-                DelayedTable(
-                    [[Paragraph(b, style=bStyle), el]],
-                    style=t_style,
-                    colWidths=colWidths,
-                ),
-            ]
+        node.elements = [
+            MySpacer(0, sb),
+            DelayedTable(
+                [[Paragraph(b, style=bStyle), el]],
+                style=t_style,
+                colWidths=colWidths,
+            ),
+        ]
         return node.elements
 
 
